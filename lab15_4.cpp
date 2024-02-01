@@ -17,3 +17,18 @@ int main(){
 	
 	return 0;
 }
+
+void shuffle(int &a , int &b , int&c , int &d){
+    int myArray[4] = {a , b , c, d};
+    for(int i = 0 ; i < 4 ; i++){
+        int j = rand() % 4 ;
+        int x = myArray[i];
+        myArray[i] = myArray[j];
+        myArray[j] = x;
+    }
+    a = myArray[0];
+    b = myArray[1];
+    c = myArray[2];
+    d = myArray[3];
+    
+}
